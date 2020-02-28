@@ -1,0 +1,139 @@
+*{
+    /* outline: 2px dashed green; */
+    margin: 0;
+    padding:0;
+
+}
+/* @media screen and (max-width: 600px) {
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "q"
+        "h"
+        "e"
+        "b"
+        "f";
+}
+ */
+/* step one - build your grid */
+.container {
+    /* height: 100%; */
+    background-color:rgb(250, 234, 214);
+
+    display: grid;
+    grid-gap: 25px;
+    /* this will be  the same for everyone */
+    grid-template-columns: repeat(12, 1fr);
+    /* this will be customized, based on your grid, use pixels or % */
+    grid-template-rows: auto;
+    /* use letters from step 2 to build the grid */
+    grid-template-areas: 
+        "c c c h h h h h h h h h"
+        "c c c b b b e e e a a a"
+        "c c c b b b e e e a a a"
+        "c c c f f f f f f f f f";
+}
+li{
+    font-weight: 500;
+    padding:10px;
+}
+
+.date{
+    font-weight: 300;
+}
+body{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+
+h2{
+    padding-top: 0px;
+}
+
+h3{
+    padding-top:20px;
+}
+
+.name{
+    font-size: 45px;
+    font-kerning: normal;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.title{
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+hr{
+    border: 1px dashed;
+}
+
+.qoute{
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+
+
+/* step three - build a grid that becomes active when the pixels are 800px or less */
+@media screen and (max-width: 800px) {
+
+    .container{
+        display: grid;
+        grid-gap: 15px;
+        /* grid is only one column, keep this way */
+        grid-template-columns: 1fr;
+        /* you can enter values, or auto will adjust the box sizes based on content */
+        grid-template-rows: auto;
+        grid-template-areas:
+        "c"
+        "h"
+        "b"
+        "a"
+        "e"
+        "f";
+    }
+}
+
+/* step 1 - assign each of your sections a letter */
+.contact {
+    grid-area: c;
+    padding-top: 300px;
+    text-align: center;
+    background-color:rgb(250, 183, 106);
+    position: relative;
+}
+
+header {
+    grid-area: h;
+}
+
+.bibliography {
+    grid-area: b;
+}
+
+.education {
+    grid-area: e;
+}
+
+.awards {
+    grid-area: a;
+    padding-right: 20px
+}
+
+footer{
+    grid-area: f;
+    font-size: 10px;
+    padding: 10px;
+}
