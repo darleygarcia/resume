@@ -1,300 +1,490 @@
-*{
-    /* outline: 2px dashed green; */
-    margin: 0;
-    padding:0;
-
-}
-/* @media screen and (max-width: 600px) {
-.container {
-    height: 100%;
-    display: grid;
-    grid-gap: 3px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-        "q"
-        "h"
-        "e"
-        "b"
-        "f";
-}
- */
-/* step one - build your grid */
-.container {
-    /* height: 100%; */
+body {
     background-color:rgb(250, 234, 214);
+    margin: 0;
+    font-family: "Open Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    padding-left: 240px;
+  }
+  main {
+    position: relative;
+    height: 100vh;
+  }
 
-    display: grid;
-    grid-gap: 25px;
-    /* this will be  the same for everyone */
-    grid-template-columns: repeat(12, 1fr);
-    /* this will be customized, based on your grid, use pixels or % */
-    grid-template-rows: auto;
-    /* use letters from step 2 to build the grid */
-    grid-template-areas: 
-        "c c c h h h h h h h h h"
-        "c c c b b b e e e a a a"
-        "c c c b b b e e e a a a"
-        "c c c f f f f f f f f f";
-}
-li{
-    font-weight: 500;
-    padding:10px;
-}
-
-.date{
-    font-weight: 300;
-}
-body{
-    font-size: 20px;
-    font-family: 'Roboto', sans-serif;
-}
-
-ul{
-    list-style: none;
-}
+  ul {
+    list-style-type: none;
+    text-align: left;
+  }
 
 
-h2{
-    padding-top: 0px;
-}
-
-h3{
-    padding-top:20px;
-}
-
-.name{
-    font-size: 45px;
-    font-kerning: normal;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.title{
-    font-size: 20px;
-    padding-bottom: 5px;
-}
-
-hr{
-    border: 1px dashed;
-}
-
-.qoute{
-    font-size: 20px;
-    padding-left: 20px;
-}
-
-/*All for link*/
-a:link{
-    color: black;
+  /*All LINKS Supposed to be a sword. but ascii art isn't my strong point--> ***|888888888*/
+  a{
     text-decoration: none;
-}
+    color:  rgb(255, 255, 255);
+  }
 
-a:hover{
+  a:visited {
     text-decoration: none;
-}
-
-a:hover{
+    color:  rgb(255, 255, 255);
+  }
+  
+  a:hover {
     text-decoration: underline;
+  }
+  
+  a:active {
+    text-decoration: underline;
+  }
+
+/*HEADER WITH NAME AND DES*/
+  main .header {
+    /*background: rgba(0, 0, 0, 0.2); /*Just so I can see where the box is located*/
+    color: #6e5c5c;
+    position: absolute;
+    top: 6%; /*Placing box while keeping it responsive*/
+    left: 27%; /*Placing box while keeping it responsive*/
+    transform: translate3d(-30%, -30%, 0); /*Had to lower the negative percets inoder to have name in line*/
+    padding: .2em .5em;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 4em;
+    font-weight: bold;
+  }
+  main .header span { /*For the Discription*/
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 0.5em;
+    display: block;
+  }
+
+
+  /*Quote*/
+  main .quote{
+  /*background: rgba(0, 0, 0, 0.2); /*Just so I can see where the box is located*/
+  color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 9.5%; /*Placing box while keeping it responsive*/
+  left: 70.5%; /*Placing box while keeping it responsive*/
+  transform: translate3d(-17%, -50%, 0); /*Had to lower the negative percets inoder to have name in line*/
+  padding: .2em .5em;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 1.3em;
 }
 
 
+  /*Education*/
+  main .edu{
+    /*background: rgba(0, 0, 0, 0.2); /*Just so I can see where the box is located*/
+    color: rgba(0, 0, 0, 0.459);
+    position: absolute;
+    top: 30%; /*Placing box while keeping it responsive*/
+    left: 33%; /*Placing box while keeping it responsive*/
+    transform: translate3d( -50%, -50%, 0); /*Had to lower the negative percets inoder to have name in line*/
+    padding: .2em .5em;
+    text-align: center;
+    /*border-radius: 20px;*/
+    font-size: 1.1em;
+  }
+
+  main .edu span { /*For the Discription*/
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 0.8em;
+    display: block;
+  }
+  main .edu-title{
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #816d6d;
+  }
+
+
+  /*Awards and Acheivements*/
+  main .awards{
+    /*background: rgba(0, 0, 0, 0.2); /*Just so I can see where the box is located*/
+    color: rgba(0, 0, 0, 0.459);
+    position: absolute;
+    top: 36.1%; /*Placing box while keeping it responsive*/
+    left: 63%; /*Placing box while keeping it responsive*/
+    transform: translate3d( -3%, -50%, 0); /*Had to lower the negative percets inoder to have name in line*/
+    padding: .2em .5em;
+    text-align: center;
+    /*border-radius: 20px;*/
+    font-size: 1.1em;
+  }
+  main .awards span { /*For the Discription*/
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 0.8em;
+    display: block;
+  }
+  main .awards-title{
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #816d6d;
+  }
+  
+  
+  /*Clubs*/
+  main .clubs{
+   /*background: rgba(0, 0, 0, 0.2); /*Just so I can see where the box is located*/
+    color: rgba(0, 0, 0, 0.459);
+    position: absolute;
+    top: 65%; /*Placing box while keeping it responsive*/
+    left: 53.75%; /*Placing box while keeping it responsive*/
+    transform: translate3d( -94.6%, -50%, 0); /*Had to lower the negative percets inoder to have name in line*/
+    padding: .2em .5em;
+    text-align: center;
+    /*border-radius: 20px;*/
+    font-size: 1.1em;
+  }
+  main .clubs span { /*For the Discription*/
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 0.8em;
+    display: block;
+  }
+  main .clubs-title{
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #816d6d;
+  }
+
+  main .clubs p{
+    margin-left: 5%;
+  }
 
 
 
-/* step three - build a grid that becomes active when the pixels are 800px or less */
-@media screen and (max-width: 800px) {
-
-    .container{
-        display: grid;
-        grid-gap: 15px;
-        /* grid is only one column, keep this way */
-        grid-template-columns: 1fr;
-        /* you can enter values, or auto will adjust the box sizes based on content */
-        grid-template-rows: auto;
-        grid-template-areas:
-        "c"
-        "h"
-        "b"
-        "a"
-        "e"
-        "f";
-    }
-}
-
-/* step 1 - assign each of your sections a letter */
-
-.image{
-    content: url(profile.png);
-    border-radius: 50%;
-    padding-top: 5px;
-
-    width: 80%;
-    height: auto;
-
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-left:30px;
-}
-
-img.resize{
-    max-width:50px;
-    max-height:50px;
-}
-
-.contact {
-    grid-area: c;
+  /*Skill*/
+  main .skills{
+    /*background: rgba(0, 0, 0, 0.2); /*Just so I can see where the box is located*/
+    color: rgba(0, 0, 0, 0.459);
+    position: absolute;
+    top: 67%; /*Placing box while keeping it responsive*/
+    left: 65.4%; /*Placing box while keeping it responsive*/
+    width: 34.3%;
+    transform: translate3d( -10%, -30%, 0); /*Had to lower the negative percets inoder to have name in line*/
+    /*border-radius: 20px;*/
+    font-size: 1.1em;
+  }
+  main .skills-title{
     
-    background-color:rgb(177, 140, 99);
-
-    height: 100%;
-    width: 320px;
-    position: fixed; /*so the side bar doesn't scroll*/
-
-    padding-top: 3px;
-    text-align: center; 
-}
-
-/*the base code of  this section is credited to  https://codepen.io/anon/pen/mZBbVw*/
-section {
-    overflow-x:none;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #816d6d;
+    text-align: center;
   }
 
-  #skillbar {
-    position:relative;
-    padding:1px;
-    /*left:50%; 
-    top:65%;
-    margin:-300px 0 0 -512px; */
-    width:100%;
-    height:auto;
-    /*background:#2b2b2b;*/
-    border-radius:7px;
-      -moz-border-radius:7px;
-          -webkit-border-radius:7px;
-   /* box-shadow: 0 0 1em grey;*/
+  main .skills-content { /*For the Discription*/
+    color: #816d6d;
+    font-size: 1em;
+    text-align: left;
   }
 
-    .container-skillbar {
-          width:100%;
-      margin:5px;
-          height:auto;
-          overflow:none;
-      }
-      .skillbar {
-          position:relative;
-          display:block;
-          margin-bottom:15px;
-          width:95%;
-          background:#141414;
-          height:30px;
-          border-radius:7px;
-          -moz-border-radius:7px;
-          -webkit-border-radius:7px;
-          -webkit-transition:0.4s linear;
-          -moz-transition:0.4s linear;
-          -ms-transition:0.4s linear;
-          -o-transition:0.4s linear;
-          transition:0.4s linear;
-  
-      }
-  
-      .skillbar-title {
-          position:absolute;
-          top:0;
-          left:0;
-          width:110px;
-          font-weight:bold;
-          font-size:13px;
-          background:#6adcfa;
-          -webkit-border-top-left-radius:7px;
-          -webkit-border-bottom-left-radius:7px;
-          -moz-border-radius-topleft:7px;
-          -moz-border-radius-bottomleft:7px;
-          border-top-left-radius:7px;
-          border-bottom-left-radius:7px;
-      }
-  
-      .skillbar-title span {
-          display:block;
-          background:rgba(0, 0, 0, 0.15);
-          padding:0 20px;
-          height:30px;
-          line-height:30px;
-          -webkit-border-top-left-radius:7px;
-          -webkit-border-bottom-left-radius:7px;
-          -moz-border-radius-topleft:7px;
-          -moz-border-radius-bottomleft:7px;
-          border-top-left-radius:7px;
-          border-bottom-left-radius:7px;
-      }
-  
-      .skillbar-bar {
-          height:30px;
-          width:0;
-          border-radius:15px;
-          -moz-border-radius:15px;
-          -webkit-border-radius:15px;
-        box-shadow: 0 0 1em gray;
-      }
-  
-      .skill-bar-percent {
-          position:absolute;
-          right:10px;
-          top:0;
-          font-size:11px;
-          height:30px;
-          line-height:30px;
-          color:#ffffff;
-          color:rgba(153, 153, 153, 0.75);
-      }
+  main .skills h4{
+   margin-top: 0;
+   margin-bottom: 0;
 
-    /*body chart credit to https://codepen.io/anon/pen/ewEpvE*/
-      
-      .skills2{
-        background-color:#ddd;
-        width:100%;
-        height:15px;
-        position:relative;
-        margin:0px;
-      }
-      .title-bar2{
-        position:relative;
-        top:-50px;
-        margin:0px
-      }
-      .skills2 span {
-        float:right;
-        margin-top:-22px;
-        margin-right:5px;
-      }
-      
-      .skillbar2{
-        background-color:#ff3333;
-        width:0px;
-        height:15px;
-      }
+  }
+
+    /*SECOND SKILLS BAR BECAUSE WHY THE HELL NOT*/
+   /*= Skills */
+
+    main .skillbar-wrapper {
+      max-width: 960px;
+    }
+
+    main .skillbar {
+      position:relative;
+      width: 100%;
+      background: rgb(160, 157, 157);
+      height: 5px;
+      border-radius: 3px;	
+    }
+    
+    main .skillbar-bar {
+      height: 5px;
+      width: 0%;
+      border-radius: 3px;
+      transition: 500ms linear;
+    }
+
+        /*SKIlL BAR COLOR*/
+        main .complete.server .skill-bar-percent {
+          color: #333;
+        }
+
+        main .acs .skillbar-bar {
+          background: #28aa2f;	
+        } 
+        main .html5 .skillbar-bar {
+          background: #e67e22;	
+        }
+
+        main .css .skillbar-bar {
+          background: #3498db;	
+        }
+
+        main.javascript .skillbar-bar {
+          background: #f1ac18;
+        }
+
+        main .jquery .skillbar-bar {
+          background: #2c3e50;	
+        }
+
+        main .php .skillbar-bar {
+          background: #b95851;	
+        }
 
 
-header {
-    grid-area: h;
+  /*START of Side bar*/
+  .menu {
+    background: rgb(177, 140, 99);
+    height: 100vh;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    outline: none;
+  }
+
+  /*Picture*/
+  .menu .avatar {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 2em 0.5em;
+    text-align: center;
+  }
+  .menu .avatar img {
+    width: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    /*border: 4px solid #ffea92;*/
+    /*box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);*/
+  }
+  .menu .avatar h2 {
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+
+ /*Social Media*/
+  .menu img.resize{
+    max-width:40px;
+    max-height:40px;
+    display: inline-block;
+  }
+
+
+
+/*Skill Bars*/
+.container-skillbar {
+  width:100%;
+  margin:5px;
+  height:auto;
+  overflow:none;
+}
+.skillbar {
+  position:relative;
+  display:block;
+  margin-bottom:15px;
+  width:95%;
+  background:#141414;
+  height:30px;
+  border-radius:7px;
+  -moz-border-radius:7px;
+  -webkit-border-radius:7px;
+  -webkit-transition:0.4s linear;
+  -moz-transition:0.4s linear;
+  -ms-transition:0.4s linear;
+  -o-transition:0.4s linear;
+  transition:0.4s linear;
+
 }
 
-.bibliography {
-    grid-area: b;
+.skillbar-title {
+  position:absolute;
+  top:0;
+  left:0;
+  width:110px;
+  font-weight:bold;
+  font-size:13px;
+  background:#6adcfa;
+  -webkit-border-top-left-radius:7px;
+  -webkit-border-bottom-left-radius:7px;
+  -moz-border-radius-topleft:7px;
+  -moz-border-radius-bottomleft:7px;
+  border-top-left-radius:7px;
+  border-bottom-left-radius:7px;
 }
 
-.education {
-    grid-area: e;
+.skillbar-title span {
+  display:block;
+  background:rgba(0, 0, 0, 0.15);
+  padding:0 20px;
+  height:30px;
+  line-height:30px;
+  -webkit-border-top-left-radius:7px;
+  -webkit-border-bottom-left-radius:7px;
+  -moz-border-radius-topleft:7px;
+  -moz-border-radius-bottomleft:7px;
+  border-top-left-radius:7px;
+  border-bottom-left-radius:7px;
 }
 
-.awards {
-    grid-area: a;
-    padding-right: 20px
+.skillbar-bar {
+  height:30px;
+  width:0;
+  border-radius:15px;
+  -moz-border-radius:15px;
+  -webkit-border-radius:15px;
+  box-shadow: 0 0 1em gray;
 }
 
-footer{
-    grid-area: f;
-    font-size: 10px;
-    padding: 10px;
+.skill-bar-percent {
+  position:absolute;
+  right:10px;
+  top:0;
+  font-size:11px;
+  height:30px;
+  line-height:30px;
+  color:#ffffff;
+  color:rgba(153, 153, 153, 0.75);
 }
+
+
+
+
+
+  
+  
+  @media screen and (max-width: 900px) and (min-width: 400px) {
+    body {
+      padding-left: 90px;
+    }
+
+    main .header {
+      font-size: 2em;
+      left: 40%;
+    }
+
+    main .quote{
+      font-size: 1em;
+    }
+
+    main .edu{
+      font-size: 1em;
+    }
+
+
+    .menu {
+      width: 90px;
+    }
+    .menu .avatar {
+      padding: 0.5em;
+      position: relative;
+    }
+    .menu .avatar img {
+      width: 60px;
+    }
+    .menu .avatar h2 {
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 100px;
+      margin: 0;
+      min-width: 200px;
+      border-radius: 4px;
+      background: rgba(0, 0, 0, 0.4);
+      transform: translate3d(-20px, -50%, 0);
+      transition: all 0.15s ease-in-out;
+    }
+    .menu .avatar:hover h2 {
+      opacity: 1;
+      transform: translate3d(0px, -50%, 0);
+    }
+    .menu ul li {
+      height: 60px;
+      background-position: center center;
+      background-size: 30px auto;
+      position: relative;
+    }
+    .menu ul li span {
+      opacity: 0;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 0.2em 0.5em;
+      border-radius: 4px;
+      top: 50%;
+      left: 80px;
+      transform: translate3d(-15px, -50%, 0);
+      transition: all 0.15s ease-in-out;
+    }
+    .menu ul li span:before {
+      content: '';
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 50%;
+      left: -5px;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-right: 5px solid rgba(0, 0, 0, 0.5);
+      transform: translateY(-50%);
+    }
+    .menu ul li:hover span {
+      opacity: 1;
+      transform: translate3d(0px, -50%, 0);
+    }
+  }
+
+
+
+
+
+
+  @media screen and (max-width: 400px) {
+    body {
+      padding-left: 0;
+    }
+
+    .menu {
+      width: 230px;
+      box-shadow: 0 0 0 100em rgba(0, 0, 0, 0);
+      transform: translate3d(-230px, 0, 0);
+      transition: all 0.3s ease-in-out;
+    }
+    .menu .smartphone-menu-trigger {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 100%;
+      background: rgb(177, 140, 99);
+    }
+    .menu .smartphone-menu-trigger:before,
+    .menu .smartphone-menu-trigger:after {
+      content: '';
+      width: 50%;
+      height: 2px;
+      background: #fff;
+      border-radius: 10px;
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+    }
+    .menu .smartphone-menu-trigger:after {
+      top: 55%;
+      transform: translate3d(-50%, -50%, 0);
+    }
+    .menu ul li {
+      padding: 1em 1em 1em 3em;
+      font-size: 1.2em;
+    }
+    .menu:focus {
+      transform: translate3d(0, 0, 0);
+      box-shadow: 0 0 0 100em rgba(0, 0, 0, 0.6);
+    }
+    .menu:focus .smartphone-menu-trigger {
+      pointer-events: none;
+    }
+
+  
+  }
